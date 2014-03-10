@@ -6,4 +6,13 @@ class BadController < ApplicationController
     name = conn.execute(query)
     render :text => name.values
   end
+
+  def comments
+    render "show_comments"
+  end
+
+  def save_comment
+    Comment.create!(:comment => params["comment"])
+    render "show_comments"
+  end
 end

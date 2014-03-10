@@ -1,0 +1,6 @@
+<h2>Latest Comments</h2>
+<p><a href="/bad/comment">Add New Comment!</a></p>
+<% Comment.all.each do |comment| %>
+  <p><%=raw(comment.comment)%></p>
+  <hr />
+<% end %>
