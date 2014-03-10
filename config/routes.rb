@@ -4,10 +4,8 @@ Security::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-  get "bad/inject" => "bad#injection"
-  get "bad/comment" => "bad#comment"
+  get "bad/:action" => "bad"
   post "bad/save_comment" => "bad#save_comment"
-  get "bad/comments" => "bad#comments"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
