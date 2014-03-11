@@ -1,0 +1,6 @@
+<h1>Your Files</h1>
+<ul>
+<% @files.each do |file| %>
+  <li><a href="/bad/download_file?company=<%=@company %>&file=<%=file %>"><%=file %></a></li>
+<% end %>
+</ul>
