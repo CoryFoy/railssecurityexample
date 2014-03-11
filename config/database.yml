@@ -9,3 +9,9 @@ development:
 test:
   <<: *COMMON
   database: security_test
+
+production:
+  adapter: postgresql
+  username: security_user_1aaBB
+  database: security_production
+  password: 0hyouwi5h!w4aj0king
