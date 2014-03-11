@@ -9,6 +9,8 @@ Security::Application.routes.draw do
   post "bad/upload" => "bad#upload"
   post "bad/process_payment" => "bad#process_payment"
 
+  get "admin/:action" => "admin"
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

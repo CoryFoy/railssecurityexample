@@ -1,0 +1,14 @@
+<table border="1">
+  <tr>
+    <td><strong>Amount</strong></td>
+    <td><strong>CC Number</strong></td>
+    <td><strong>Expiration Date</strong></td>
+  </tr>
+<% @payments.each do |payment| %>
+  <tr>
+    <td><%=payment.amount %></td>
+    <td><%=payment.cc_number %></td>
+    <td><%=payment.expire_date %></td>
+  </tr>
+<% end %>
+</table>
