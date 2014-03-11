@@ -40,4 +40,16 @@ class BadController < ApplicationController
   def redirect
     redirect_to params[:url]
   end
+
+  def process_payment
+    @amount = params[:amount]
+    @cc_number = params[:cc]
+    @expire_date = params[:expire]
+    Payment.create!(
+      :amount => @amount,
+      :cc_number => @cc_number,
+      :expire_date => @expire_date
+    )
+    render "payment_receipt"
+  end
 end

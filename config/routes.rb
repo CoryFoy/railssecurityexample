@@ -7,6 +7,7 @@ Security::Application.routes.draw do
   get "bad/:action" => "bad"
   post "bad/save_comment" => "bad#save_comment"
   post "bad/upload" => "bad#upload"
+  post "bad/process_payment" => "bad#process_payment"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

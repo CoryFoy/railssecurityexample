@@ -1,0 +1,9 @@
+<h1>Payment page</h1>
+<p>Make your payment securely below. Totally trust us because we have a picture of a lock <img src="lock.jpg" /></p>
+<form action="/bad/process_payment" method="post">
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+  <p>Credit Card #: <input name="cc" /></p>
+  <p>Expiration Date: <input name="expire"></p>
+  <p>Amount: <input name="amount" /></p>
+  <input type="submit" value="Make Payment" />
+</form>
