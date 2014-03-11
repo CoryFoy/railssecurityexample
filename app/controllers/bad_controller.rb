@@ -36,4 +36,8 @@ class BadController < ApplicationController
     @files = directory.entries
     render "uploaded_files"
   end
+
+  def redirect
+    redirect_to params[:url]
+  end
 end
